@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/header"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:id="@+id/blanco"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/jugador1"
+                android:text="Jugador 1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:id="@+id/jugador2"
+                android:text="Jugador 2"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAlignment="textEnd"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:id="@+id/negro"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/tablero"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/tablero33"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/uno"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/dos"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/tres"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/cuatro"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/cinco"
+                android:layout_alignTop="@+id/cuatro"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/seis"
+                android:layout_alignTop="@+id/cinco"
+                android:layout_alignStart="@id/tres"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/siete"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/ocho"
+                android:layout_alignTop="@+id/siete"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/nueve"
+                android:layout_alignTop="@+id/ocho"
+                android:layout_alignStart="@id/seis"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/startGame"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tablero"
+            android:layout_centerHorizontal="true"
+            android:text="Empezar a Juegar"
+            android:backgroundTint="@color/orange"
+            android:layout_marginTop="100dp"/>
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/choronometer1"
+            android:layout_below="@+id/startGame"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/choronometer1"
+            android:id="@+id/controllButtons"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/salida"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/ic_menu_revert"
+                android:backgroundTint="@color/orange" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/ic_media_pause"
+                android:layout_marginLeft="100dp"
+                android:backgroundTint="@color/orange" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:drawable/ic_menu_rotate"
+                android:layout_marginLeft="100dp"
+                android:backgroundTint="@color/orange" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
