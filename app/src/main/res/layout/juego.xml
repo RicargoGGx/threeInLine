@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
-    
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -59,12 +59,13 @@
 
         </LinearLayout>
 
+
         <RelativeLayout
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:id="@+id/tablero"
             android:layout_below="@+id/header"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/tablero33"
             android:layout_centerHorizontal="true">
 
@@ -125,64 +126,87 @@
 
         </RelativeLayout>
 
-        <Button
-            android:id="@+id/startGame"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tablero"
-            android:layout_centerHorizontal="true"
-            android:text="Empezar a Juegar"
-            android:backgroundTint="@color/orange"
-            android:layout_marginTop="100dp"/>
+<RelativeLayout
+    android:id="@+id/marcadorG"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/tablero"
+    android:layout_marginTop="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/marcadorJ0"
+        android:text="Jugador 1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/marcador0"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/marcadorJ0"
+        android:layout_marginLeft="15dp"
+        />
+    <TextView
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/marcadorJ1"
+        android:layout_alignParentRight="true"
+        android:text="Jugador 2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/marcador1"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_toLeftOf="@id/marcadorJ1"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/marcadorJ0"
+        android:layout_marginRight="15dp"
+        android:textAlignment="textEnd"
+        />
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_below="@+id/marcadorG">
+    <TextView
+        android:id="@+id/empates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empates:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/empatesP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/empates"
+        android:layout_centerHorizontal="true"/>
 
-        <Chronometer
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/choronometer1"
-            android:layout_below="@+id/startGame"
-            android:textSize="30sp"
-            android:textColor="@color/white"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            />
 
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_below="@id/choronometer1"
-            android:id="@+id/controllButtons"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            >
-
-            <Button
-                android:id="@+id/salida"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@android:drawable/ic_menu_revert"
-                android:backgroundTint="@color/orange" />
-
-            <Button
-                android:id="@+id/pause"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@android:drawable/ic_media_pause"
-                android:layout_marginLeft="100dp"
-                android:backgroundTint="@color/orange" />
-
-            <Button
-                android:id="@+id/reset"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@android:drawable/ic_menu_rotate"
-                android:layout_marginLeft="100dp"
-                android:backgroundTint="@color/orange" />
-        </LinearLayout>
+</RelativeLayout>
 
 
     </RelativeLayout>
 
-    
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
