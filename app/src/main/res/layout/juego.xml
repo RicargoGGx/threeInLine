@@ -5,7 +5,7 @@
     tools:ignore="MissingDefaultResource"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/gray">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:id="@+id/blanco"
-                android:background="@color/white"
+                android:background="@drawable/x"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"/>
 
@@ -53,9 +53,9 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:id="@+id/negro"
-                android:background="@color/white"
+                android:background="@drawable/o"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginRight="10dp"/>
 
         </LinearLayout>
 
@@ -65,7 +65,7 @@
             android:layout_height="300dp"
             android:id="@+id/tablero"
             android:layout_below="@+id/header"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/tablero33"
             android:layout_centerHorizontal="true">
 
@@ -131,12 +131,12 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:layout_below="@id/tablero"
-    android:layout_marginTop="100dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    android:layout_marginTop="50dp">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="100dp"
         android:id="@+id/marcadorJ0"
-        android:text="Jugador 1"
+        android:background="@drawable/x"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_centerVertical="true"
@@ -153,13 +153,13 @@
         android:layout_toRightOf="@id/marcadorJ0"
         android:layout_marginLeft="15dp"
         />
-    <TextView
+    <ImageView
         android:layout_marginRight="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
         android:id="@+id/marcadorJ1"
         android:layout_alignParentRight="true"
-        android:text="Jugador 2"
+        android:background="@drawable/o"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_centerVertical="true"
